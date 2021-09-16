@@ -1,0 +1,79 @@
+:root {
+
+    --clr-bg: #e4f1f0;
+    --clr-light: #f7f7f2;
+    --clr-dark: #00454e;
+    --clr-accentp: #fbe455;
+    --clr-accentr: #f1c9c0;
+
+    --ff-prim: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    --fs-h1: 4rem;
+    --fs-h2: 2rem;
+    --fs-p: 1rem;
+    --fs-system: 1.5rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-bg);
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    font-family: var(--ff-prim);
+    font-size: var(--fs-system);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    padding: 1em;
+    width: 100%;
+}
+
+.nav_styles ul {
+    display: flex;
+
+}
+
+.nav_styles li {
+    list-style: none;
+    padding-bottom: .4em;
+
+}
+
+.nav_styles a {
+    text-decoration: none;
+    color: var(--clr-light);
+    margin: 1.2em 3em;
+    padding-bottom: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.nav_styles li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-light);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav_styles li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
