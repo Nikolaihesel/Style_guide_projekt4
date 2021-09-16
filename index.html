@@ -27,8 +27,8 @@
                 <a href="#knap">
                     <li>Buttons</li>
                 </a>
-                <a href="#">
-                    <li>Forms</li>
+                <a href="#form">
+                    <li>Form</li>
                 </a>
                 <a href="#">
                     <li>Figur</li>
@@ -186,27 +186,73 @@
     <hr class="under_titel">
 <div class="form_wrap">
 
-    <form action="/action_page.php" autocomplete="on">
-        <label for="fname">
-            <p> Fornavn</p>
-        </label>
-        <input type="text" name="fname" value="">
-        <label for="lname">
-            <p> Efternavn </p>
-        </label>
-        <input type="text" name="lname" value="">
-        <label for="email">
-            <p> Email</p>
-        </label>
-        <input type="email" name="email" value="">
+<form id="login-form">
+    <div class="input_text" id="fname">
+        <input type="text" placeholder=" Fornavn" name="fname" required>
+    </div>
+    <div class="input_text" id="lname">
+        <input type="text" placeholder=" Efternavn" name="lname" required>
+    </div>
+    <div class="input_text" id="date">
+        <input type="date" id="start" name="Ledige tider" min="2021-09-17" max="2023-12-31" required>
+    </div>
 
-        <label for="remember">
-            <p> Husk mig</p>
-        </label>
-        <input type="checkbox" name="remember">
-        <input type="submit">
-    </form>
+    <div class="input_text" id="email">
+        <input type="email" placeholder=" Email" name="email" required>
+    </div>
+    <button class="login_submit" id="login-form-submit type=" submit> Bekræft booking </button>
+</form>
 
+<p class="btn_code_input">
+
+    HTML: form id="login-form">
+    div class="input_text" id="fname">
+    input type="text" placeholder=" Fornavn" name="fname" required>
+    /div>
+    div class="input_text" id="lname">
+    input type="text" placeholder=" Efternavn" name="lname" required>
+    /div>
+    div class="input_text" id="email">
+    input type="email" placeholder=" Email" name="email" required>
+    /div>
+    div class="input_text" id="date">
+    input type="date" id="start" name="Ledige tider" min="2021-09-17" max="2023-12-31" required>
+    /div>
+
+    button class="login_submit" id="login-form-submit type=" submit> Bekræft booking </button>
+    /form>
+
+    CSS: form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 2em;
+    }
+
+    .input_text input {
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+    height: 40px;
+    font-size: var(--fs-system);
+    width: 400px;
+    margin: .5em 0em;
+
+    }
+
+    .login_submit {
+    background-color: rgb(36, 196, 36);
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    transition: transform .2s ease-in;
+    }
+
+    .login_submit:hover {
+    transform: scale(1.1);
+    background-color: rgb(45, 235, 45);
+    }
+
+</p>
 </div>
 
 </div>
