@@ -253,6 +253,16 @@ nav {
     background-color: rgb(45, 235, 45);
 }
 
+.btn-popup {
+    color: #fff;
+    background-color: #00454e;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 7px 27px;
+    border-radius: 3px;
+}
 
 /* knap slutter her */
 
